@@ -1,0 +1,69 @@
+@mixin aswaq-button($backColor, $fontColor, $height, $border, $icon) {
+  @include transition(all .25s ease);
+  margin-bottom: 15px;
+  font-size: 25px;
+  background: $backColor;
+  border: $border;
+  color: $fontColor;
+  text-decoration: none;
+  font-family: "Roboto";
+  font-weight: 300;
+  
+   // &:before {
+   //  color: red;
+   //  content:"" !important;
+  // }
+  
+  .x-button-label {
+    padding: 10px 0;
+  }
+  &.x-button-pressing {
+    background: $colorPressed;
+    color : $colorWhite;
+    border : 0px;
+  }
+
+ }
+
+.x-button .x-button-icon {
+    border : 0px;
+        
+    &:before {
+      
+      // margin-left: ($defaultButtonHeight/2)px !important;
+      // margin-bottom: -($defaultButtonHeight/5)px !important;
+      
+      margin-left: 30px !important;
+      margin-top: -12px !important;
+    }
+
+    &:after {
+            
+      margin-right: 30px !important;
+      margin-top: -12px !important;
+    }
+
+  }
+
+.blue {
+  @include aswaq-button($colorBlue, $colorWhite, $defaultButtonHeight, $noBorder, '');
+  
+}
+
+.white {
+  @include aswaq-button($colorWhite, $colorOrange, $defaultButtonHeight, $borderLightGray, '');
+}
+
+.lightgray {
+  @include aswaq-button($colorLightGray, $colorDarkGray, $defaultButtonSamllHeight, $noBorder, '');
+}
+
+.green {
+ @include aswaq-button($colorGreen, $colorWhite, $defaultButtonHeight, $noBorder, '');
+ }
+
+ .x-button-back {
+ @include aswaq-button($noColor, $colorDarkGray, $defaultButtonHeight, $noBorder, '');
+ }
+
+ 

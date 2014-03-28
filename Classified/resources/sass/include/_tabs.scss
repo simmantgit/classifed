@@ -1,0 +1,126 @@
+.x-tabbar {
+  min-height: $tabheight;
+  background-color: $colorPressed;
+
+  &.x-docked-bottom {
+    min-height: $tabheight;
+  }
+}
+
+.x-tab {
+  height: 100%;
+  border: 0;
+  background: transparent;
+  border-right: 1px solid $colorLightGray;
+  @include st-box-orient(vertical);
+  color: $colorWhite;
+}
+
+.x-tab-active {
+  background: $colorLightGray;
+
+}
+
+.x-tab {
+  &.x-tab-active {
+      margin: 0;
+
+      .x-button-label {
+      color: $colorBlue;
+      
+    }
+
+   .x-button-icon:before, .x-button-label {
+      color: $colorBlue !important; // culoarea iconitei can este tab-ul afisat
+    }
+  }
+
+  .x-button-label {
+    font-size: .65em;
+    font-weight: 400;
+    color: pink;
+    line-height: 3em;
+  }
+
+  .x-button-icon {
+    display: block;
+    width: 100%;
+    height: $tabheight/2;
+    margin: 0 auto;
+    
+    .x-button-icon.x-hidden {
+      display: none;
+    }
+
+    &:before {
+      color: $colorWhite;
+      font-size: $tabheight/2;
+      line-height:$tabheight/2;
+      margin-top: $tabheight*0.3;
+    }
+  }
+
+  .x-badge {
+    color: pink;
+    top: 0px;
+    left: 55%;
+    right: auto;
+    max-width: 55%;
+    font-size: .65em;
+    line-height: 1.5em;
+  }
+}
+
+.x-tabbar.x-docked-top {
+  .x-tab {
+    @include border-radius(0);
+    @include st-box-flex(1);
+    min-width: 3.3em;
+    height: inherit;
+    background-color: transparent;
+    border: 0;
+    padding: 3px;
+    margin: 0;
+    border-right: 1px solid $colorLightGray;
+    color: $colorPressed;
+    padding: 7px;
+
+    .x-button-label {
+      color: #80bd00;
+      font-size: .8em;
+      line-height: 1;
+    }
+
+    &.x-tab-active {
+      background-color: $colorLightGray;
+      
+      .x-button-label {
+        color: red;
+      }
+
+      .x-button-icon {
+        color: blue;
+      }
+    }
+
+    .x-button-icon::before {
+      display: none;
+    }
+
+    &:last-child {
+        border-left: 0;
+    }
+
+    .x-button-icon.x-hidden {
+      display: none !important;
+    }
+  }
+}
+
+.x-thumb {
+  position: absolute;
+  height: 16px;
+  width: 10px;
+  // border: 1px solid #ccc;
+  background-color: #1996e6;
+}

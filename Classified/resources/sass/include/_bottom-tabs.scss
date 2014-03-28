@@ -1,0 +1,26 @@
+@mixin aswaq-bottom-tab($backColor, $fontColor, $height, $border, $icon) {
+  @include transition(all .25s ease);
+  margin-bottom: 15px;
+  font-size: 25px;
+  
+  border: $border;
+  color: $fontColor;
+  text-decoration: none;
+  font-family: "Roboto";
+  font-weight: 300;
+  
+  .x-button-label {
+    padding: 10px 0;
+  }
+  &.x-button-pressing {
+    background: $colorPressed;
+    color : $colorWhite;
+    border : 0px;
+  }
+}
+
+.bottom-tab {
+  @include aswaq-bottom-tab($colorPressed, $colorWhite, $defaultButtonHeight, $noBorder, '');
+  
+}
+

@@ -1,0 +1,7 @@
+.x-carousel-indicator span {
+	@include border-radius(1px);
+
+	&.x-carousel-indicator-active {
+		background-color: $colorBlue;
+	}
+}
